@@ -46,8 +46,8 @@ const MainPage = () => {
             {/*    </div>*/}
             {/*</Example>*/}
             inputValue:{inputValue}
-            <Button onClick={() => handleShow('show')}></Button>
-            <Button onClick={() => handleShow('show2')}></Button>
+            <Button onClick={() => handleShow('show')}>Открыть</Button>
+            <Button onClick={() => handleShow('show2')}>Открыть</Button>
             {
                 show && <Modal
                     handleShow={handleShow}
