@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from "./Button.module.css";
 
-const Button = ({name, color}) => {
+const Button = ({name, color, onClick}) => {
     return (
-        <button className={`${classes.btn} ${classes[color]}`}>{name}</button>
+        <button onClick={onClick} className={`${classes.btn} ${classes[color]}`}>{name}Открыть</button>
     );
 };
 

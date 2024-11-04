@@ -6,6 +6,7 @@ import Content from "../components/Content";
 import Example from "../components/Example/Example";
 import Modal from "../components/modal/Modal";
 import Count from "../components/count/Count";
+import List from "../components/List";
 
 const MainPage = () => {
     const [show, setShow] = useState(false)
@@ -13,6 +14,12 @@ const MainPage = () => {
     const [name, setName] = useState('')
     const [inputValue, setInputValue] = useState('')
     console.log(inputValue)
+
+    const lists = [
+        { id: 1, title: 'coding', completed: false },
+        { id: 2, title: 'eat', completed: false },
+        { id: 3, title: 'sleep', completed: false }
+    ];
 
     const handleInput = (event) => {
         setInputValue(event.target.value);
@@ -39,8 +46,8 @@ const MainPage = () => {
             {/*    </div>*/}
             {/*</Example>*/}
             inputValue:{inputValue}
-            <button onClick={() => handleShow('show')}>Открыть</button>
-            <button onClick={() => handleShow('show2')}>Открыть</button>
+            <Button onClick={() => handleShow('show')}></Button>
+            <Button onClick={() => handleShow('show2')}></Button>
             {
                 show && <Modal
                     handleShow={handleShow}
@@ -56,6 +63,7 @@ const MainPage = () => {
                 </Modal>
             }
             <Count/>
+            <List lists={lists} />
         </div>
     );
 };
