@@ -13,10 +13,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "../lesson2/node_modules/.bin/react-scripts start",
-    "build": "../lesson2/node_modules/.bin/react-scripts build",
-    "test": "../lesson2/node_modules/.bin/react-scripts test",
-    "eject": "../lesson2/node_modules/.bin/react-scripts eject"
+    "start": "react-scripts start",
+    "build": "../lesson3/node_modules/.bin/react-scripts build",
+    "test": "../lesson3/node_modules/.bin/react-scripts test",
+    "eject": "../lesson3/node_modules/.bin/react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
