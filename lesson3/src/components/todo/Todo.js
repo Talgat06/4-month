@@ -9,11 +9,11 @@ const Todo = ({
                   handleDelete
               }) => {
     return (
-        <li className={classes.li}>
+        <li className={`${classes.li} ${todo.completed ? classes.completed : ''}`}>
             <div className={classes.info}>
                 <p>id: {todo.id}</p>
                 <p>title: {todo.title}</p>
-                <p>completed: {todo.completed ? 'true' : 'false'}</p>
+                {!todo.completed && <p>completed: {todo.completed ? 'true' : 'false'}</p>}
             </div>
             <div className={classes.btns}>
                 <Button name={'Edit'} action={() => {

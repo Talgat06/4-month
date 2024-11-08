@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TodoList from '../components/todoList/TodoList';
 import Button from '../components/button/Button';
 import Modal from '../components/modal/Modal';
+import todo from "../components/todo/Todo";
 
 
 const TodoPage = () => {
@@ -40,16 +41,16 @@ const TodoPage = () => {
     };
 
     const handleDone = (id) => {
-        todoList.map(todo=> {
+        setTodoList(todoList.map(todo=> {
             if (id === todo.id) {
                 return todo.completed = !todo.completed
             }
-        })
+        }))
         setTodoList([...todoList])
     }
 
     const handleDelete = (id) => {
-        console.log(id);
+        setTodoList(prevState => prevState.filter(todo => todo.id !== id))
     }
     const handleShow = (name) => {
         setName(name);
