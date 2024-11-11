@@ -9,11 +9,17 @@ const Todo = ({
                   handleDone,
                   handleDelete,
                   handleEdit,
+                  handleCancel,
                   setCurrentId,
                   isEdit
               }) => {
     const [ inputValue, setInputValue ] = useState(todo.title);
     console.log(inputValue, 'inputValue');
+
+    const handleSave = () => {
+        handleEdit({ ...todo, title: inputValue });
+    };
+
     return (
         <>
 
@@ -37,12 +43,8 @@ const Todo = ({
                         type="text"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}/>
-                    <Button name={'Save'} color={'primary'} action={() => handleEdit({
-                        ...todo,
-                        title: inputValue
-                    })}/>
-                    <Button name={'Cancel'} color={'error'} action={() => {
-                    }}/>
+                    <Button name={'Save'} color={'primary'} action={handleSave}/>
+                    <Button name={'Cancel'} color={'error'} action={handleCancel}/>
                 </div>
             }
 

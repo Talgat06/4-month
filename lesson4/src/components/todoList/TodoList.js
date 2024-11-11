@@ -19,7 +19,11 @@ const TodoList = ({
                     todo={todo}
                     handleDone={handleDone}
                     handleDelete={handleDelete}
-                    handleEdit={handleEdit}
+                    handleEdit={(updatedTodo) => {
+                        handleEdit(updatedTodo)
+                        setCurrentId(null)
+                    }}
+                    handleCancel = {()=> setCurrentId(null)}
                     setCurrentId={setCurrentId}
                     isEdit={currentId === todo.id}
                 />)
