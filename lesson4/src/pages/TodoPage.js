@@ -53,15 +53,6 @@ const TodoPage = () => {
         console.log('useEffect');
     }, [ show ]);
 
-
-    useEffect(() => {
-        localStorage.setItem('user', JSON.stringify({
-            id: 5,
-            name: 'Bakyt'
-        }));
-    }, []);
-
-    console.log(JSON.parse(localStorage.getItem('user')).id);
     useEffect(() => {
         const myLocalStorage = JSON.parse(localStorage.getItem('todo'));
         if (myLocalStorage === null) {
