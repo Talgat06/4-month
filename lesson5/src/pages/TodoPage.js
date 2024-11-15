@@ -4,7 +4,6 @@ import Button from '../components/button/Button';
 import Modal from '../components/modal/Modal';
 import Pagination from '../components/pagination/Pagination';
 
-
 const TodoPage = () => {
     const [ show, setShow ] = useState(false);
     const [ offset, setOffset ] = useState(0);
@@ -13,6 +12,7 @@ const TodoPage = () => {
     const [ name, setName ] = useState('');
     const [ inputValue, setInputValue ] = useState('');
     const [ todoList, setTodoList ] = useState([]);
+
     const handleInput = (event) => {
         setInputValue(event.target.value);
     };

@@ -30,6 +30,7 @@ const UserPage = () => {
         fetchApi('users').then(data => setUsers(data));
         fetchUsers('users').then(data => setUsers1(data));
     }, []);
+
     return (
         <div>
             {users.map(user=><div>{user.name}</div>)}
