@@ -4,8 +4,8 @@ import classes from "./PokemonPage.module.scss";
 
 const PokemonPage = () => {
     const [pokemonList, setPokemonList] = useState([]);
-    const [next, setNext] = useState('');
-    const [prev, setPrev] = useState('');
+    const [next, setNext] = useState();
+    const [prev, setPrev] = useState();
 
     const fetchPokemon = async (url = 'https://pokeapi.co/api/v2/pokemon?limit=12') => {
         try {
